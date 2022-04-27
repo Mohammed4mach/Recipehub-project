@@ -13,7 +13,7 @@ body{
     background: linear-gradient(rgb(25, 24, 24, 0.5),rgb(59, 51, 51)),url('background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;;
+    height: 760px;
     padding:80px 0;    
     position: relative;
 }
@@ -21,7 +21,6 @@ body{
     text-align: center;
     width:870px;
     margin:0 auto 15px;
-   
 }
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&family=Ingrid+Darling&display=swap');
 
@@ -29,12 +28,10 @@ body{
     font-size: 55px;
     color: rgb(255, 122, 55);
     font-family: 'Courgette', cursive;
-    
 }
 .disciption p{
     color:#FFF;
     margin: 20px 0;
-    
 }
 .up-container{
     display:flex;
@@ -222,20 +219,15 @@ body{
     text-align: left;
     font-size: 14px;
 }
-.slider1, .slider2{
+.slider1{
     height:50px;
     bottom: 0;
     text-align: center;
     user-select: none;
-    position: absolute;
     margin:20px auto;
     width:100%;
 }
-.slider2{
-    display: none;
-}
-.slider1 > div,
-.slider2 > div{
+.slider1 > div{
     width: 18px;;
     height: 18px;;
     border-radius: 50%;
@@ -247,9 +239,6 @@ body{
 .slider1 .one,
 .slider1 .six{
     display: inline-block;
-}
-.slider2 div.active{
-    background-color:rgb(255, 122, 55);
 }
 .cards-container .card.active{
     opacity:1;
@@ -264,32 +253,16 @@ body{
     .disciption h1{
         font-size: 48px;
     }
-    /*.slider1{
-        display: none;
-    }
-    .slider2{
-        display:inline-block;
-    }*/
     .up-prev{
         margin-left: 0;
     }
     .up-next{
         margin-right: 0;
     }
-    /*.cards-container .card{
-        position: absolute;
-        opacity:0;
-    }
-    .cards-container{
-        flex-wrap: wrap;
-    }*/
     .prev, .next{
         visibility: visible;
     }
     .cards-container{
         animation: none;
     }
-}
-@media (max-width:500px){
-    
 }
