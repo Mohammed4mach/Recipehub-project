@@ -1,0 +1,123 @@
+.box{
+    box-sizing: border-box;
+    width: 390px;
+    height: 680px;
+     background: rgb(0.5,0.8,0,0.8);
+    border-radius: 4px;
+    margin-top: -9px;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    background: url(banner.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif; 
+}
+
+img{
+    box-sizing: border-box;
+    margin-top: -10px;
+    width: 150px;
+    height: 149px;
+    margin-left: 10px;
+   padding: 5px;
+}
+.input_box{
+  height: 40px;
+    width: 70%;
+    margin-top : 42px;
+    position: relative;
+}
+.input_box .icons
+{
+    position: absolute;
+    top: 40%;
+    left:-1%;
+    color:gold;
+    transform: translateY(-20%);
+}
+input[type="text"],
+input[type="email"] , 
+input[type="date"]
+{
+    display: block;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 4px;
+    width: 230px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color:gray;
+     border-bottom: 1px solid darkorange;
+    font-weight: 400;
+    font-family:sans-serif;
+     transition:0.2s ease;
+}
+input[type="radio"]{
+    margin-top: 12px;
+    margin-left: -5px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus
+{
+    border-bottom: 2px solid orange ;
+    border-bottom-right-radius: 20px;
+    color: #3498db;
+    transition: 0.3s ease;
+}
+button{
+     border: none;
+    outline: none;
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 30px 0px 0px -10px;
+    background-color: darkorange;
+    color:#fff;
+    font-size: 18px;
+    font-family:sans-serif;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+button:hover{
+    transform: scale(1.1);
+     cursor: pointer;
+    background: orangered;
+}
+
+input[type="file"]{
+    display: none;
+}
+label{
+    box-sizing: border-box;
+    font-size: 19px;
+    background-color:darkorange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin-right: 20px;
+}
+label:hover{
+     transform: scale(1.1);
+     cursor: pointer;
+    background: orangered;
+}
+ .box .Gender{
+     box-sizing: border-box;
+    font-size: 13px;
+    background-color:black;
+     color: white;  
+}
+.cities{
+position: absolute;
+margin:-49px 0px 0px -25px;
+  background-color: orange;
+    color: black;
+    font-size: 14px;
+    border: none;
+}
