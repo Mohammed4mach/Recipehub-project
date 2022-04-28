@@ -26,17 +26,13 @@ h1
     text-align: center;
     font-size: 30px;
     font-family:cursive;
-    
 }
 
 .login_box input
 {
     width: 100%;
     padding-left: 30px;
-    transition: all 0.3s ease;
-    
-    
-    
+    transition: all 0.3s ease; 
 }
 form .input_box{
   height: 60px;
@@ -52,9 +48,7 @@ form .input_box{
     background: transparent;
     height: 35px;
     color:#fff;
-    font-size: 15px;
-    
-    
+    font-size: 15px;   
 }
 .input_box .icons
 {
@@ -63,7 +57,6 @@ form .input_box{
     left: 3%;
     color:orange;
     transform: translateY(-130%);
-    
 }
 .login_box input[type="submit"]
 {
@@ -74,15 +67,13 @@ form .input_box{
     color:#fff;
     font-size: 19px;
     border-radius: 20px;
-    padding-left: 8px;
-    
+    padding-left: 8px;  
 }
 .login_box input[type="submit"]:hover
 {
     cursor: pointer;
     background: orangered;
 }
-
 .sign_up a
 {
     color: #fff;
@@ -90,14 +81,9 @@ form .input_box{
      text-decoration: none;
     margin-top: 30px;
     margin-left: 50px;
-
 }
 img{
     width: 75px;
     margin-top: -110px;
     margin-left: 113px;
 }
-
-
-
-
