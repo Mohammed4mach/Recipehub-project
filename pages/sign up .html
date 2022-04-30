@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+    <title>Sing up</title>
+    <link rel="stylesheet" href="../stylesheets/sign up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <center>
+        <div class="box">
+            <img src="../assets/img/user.png" alt=" user">
+
+            <input type="file" accept="image/*" id="file">
+            <label for="file" style="display: block;position: absolute;margin: 1px 0px 0px 125px;">Upload picture</label>
+
+            <div class="input_box">
+            <input type="text" placeholder="User Name" required>
+                <div class="icons">
+                <i class="fas fa-user"></i>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <input type="email" placeholder="E-mail address" required>
+                <div class="icons">
+                <i class="fas fa-envelope"></i></div>
+            </div>
+
+            <div class="input_box">
+                <input type="text" placeholder="password" required>
+                <div class="icons">
+                <i class="fas fa-lock"></i>
+                </div>
+            </div>
+            <div class="input_box">
+            <input type="text" placeholder="Confirm password" required>
+                <div class="icons"><i class="fas fa-lock"></i></div>
+            </div>
+            <div class="input_box">
+            <input type="datetime-local" style="margin-right: 55px;color: dimgray ;margin-top:-10px">
+                <div class="icons"><i style="transform: translateY(-130%)" class="fas fa-calendar"></i></div>
+            </div>
+            <input type="radio" name="Gender" value="male">
+            <label style="padding-right:-36px" class="Gender" for="male" >Male</label>
+            <input type="radio" name="Gender" value="female">
+            <label style="padding-right:-50px"  class="Gender"for="female">Female</label>
+            <select class="cities" >
+            <option class="option">City</option>
+            <option>Alex</option>
+            <option>Cairo</option>
+            <option>Giza</option>
+            <option>Aswan</option>
+            <option>Kafr El-sheikh</option>
+            </select>
+            <button> Submit </button>
+        </div>
+    </center>
+</body>
+</html>

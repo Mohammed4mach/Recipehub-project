@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <RoslynToolPath Condition=" '$(RoslynToolPath)' == '' ">$(MSBuildThisFileDirectory)..\..\tools\roslynlatest</RoslynToolPath>
   </PropertyGroup>
+=======
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <RoslynToolPath Condition=" '$(RoslynToolPath)' == '' ">$(MSBuildThisFileDirectory)..\..\tools\roslynlatest</RoslynToolPath>
+  </PropertyGroup>
+>>>>>>> 1acad07bfb5318569b515772b69e732e7d7e117f
   </Project>
