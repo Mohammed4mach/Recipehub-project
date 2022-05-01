@@ -1,8 +1,9 @@
 body{
-    height: 3000px;
+    height: 500px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     position: relative;
+    
 }
 /*navbar start*/
 .navbar{
@@ -19,6 +20,7 @@ body{
 .navbar-brand:hover{
     color:#e75b1e;
 }
+
 .navbar .navbar-nav .nav-link{
     color: white;
     margin-left: 50px;
@@ -35,9 +37,7 @@ body{
 }
 /* button*/
 
-.fa-solid fa-bars{
-    color: aliceblue;
-}
+
 
 .btn-outline-success {
     color: #e75b1e;
@@ -53,16 +53,14 @@ body{
     background: #333;
 }
 .dropdown-item{
-    color: white
+    color: white;
 }
 /*navbar ended*/
 
 
 /*start footer*/
-.text-warning{
-    color: #e75b1e;
-}
-h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+
+h5 {
     margin-top: 2em;
     margin-bottom: .5rem;
     font-weight: 500;
@@ -70,10 +68,15 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   }
   .bg-dark{
       color:#111;
-     top: 80%;
+      background-position: bottom;
+      position: relative;
+      top: 100%;
+      
   }
+
   .text-center{
-      margin-left: 20px;
+      
+     margin-left: 20px;
   }
   .copyright{
       margin-left: 1000px;
@@ -81,4 +84,5 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   .owner{
       color: #e75b1e;
   }
+
 /*end footer*/
