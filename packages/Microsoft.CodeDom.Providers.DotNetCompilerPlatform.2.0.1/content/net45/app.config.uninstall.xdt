@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
   <appSettings>
@@ -27,34 +26,4 @@
     <compilers xdt:Transform="Remove" xdt:Locator="Condition(count(child::*) = 0)" />
   </system.codedom>
   <system.codedom xdt:Transform="Remove" xdt:Locator="Condition(count(child::*) = 0)" />
-=======
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
-  <appSettings>
-    <add key="aspnet:RoslynCompilerLocation" value="roslyn" xdt:Transform="Remove" xdt:Locator="Match(key)" />
-  </appSettings>
-  <appSettings xdt:Transform="Remove" xdt:Locator="Condition(count(child::*) = 0)">
-  </appSettings>
-
-  <system.codedom>
-    <compilers>
-      <compiler
-        extension=".cs"
-        xdt:Transform="Remove"
-        xdt:Locator="Match(extension)" />
-    </compilers>
-  </system.codedom>
-  <system.codedom>
-    <compilers>
-      <compiler
-        extension=".vb"
-        xdt:Transform="Remove"
-        xdt:Locator="Match(extension)" />
-    </compilers>
-  </system.codedom>
-  <system.codedom>
-    <compilers xdt:Transform="Remove" xdt:Locator="Condition(count(child::*) = 0)" />
-  </system.codedom>
-  <system.codedom xdt:Transform="Remove" xdt:Locator="Condition(count(child::*) = 0)" />
->>>>>>> 1acad07bfb5318569b515772b69e732e7d7e117f
 </configuration>
