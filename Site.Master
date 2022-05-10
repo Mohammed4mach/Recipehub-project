@@ -40,7 +40,7 @@
 
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="#">Recipehub</a>
+                <a class="navbar-brand" href="Default.aspx">Recipehub</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -78,8 +78,7 @@
                           <a class="nav-link dropdown-toggle p-lg-3"
                              href="#" id="navbarDropdown" role="button"
                              data-bs-toggle="dropdown" aria-expanded="false">
-                             
-                              category
+                              Category
                           </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -12,14 +12,13 @@ namespace Recipehub
 {
     public partial class Sign_in : System.Web.UI.Page
     {
-        string err;
+        public string err;
         protected void Page_Load(object sender, EventArgs e)
         {
-            email.Text = null;
-            password.Text = null;
+            // email.Text = null;
+            // password.Text = null;
 
-            if (err != null)
-                errorLabel.Text = err;
+            errorLabel.Text = err;
 
             if (Request.Cookies["recipehub_user_id"] != null)
             {
@@ -31,16 +30,15 @@ namespace Recipehub
         protected void submit_Click(object sender, EventArgs e)
         {
             string user_email = email.Text;
-            string user_password = Func.hashPassword(password.Text);
+            string user_password = password.Text;//Func.hashPassword(password.Text);
 
             MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user=root;password=root;database=recipehub;");
-
             try
             {
                 conn.Open();
 
-                string sql = "SELECT user_id, password FROM user WHERE email = @email";
-                MySqlDataReader read = Func.executeSQLReader(conn, sql, true, user_email);
+                string sql = $"SELECT user_id, password FROM user WHERE email = '{user_email}'";
+                MySqlDataReader read = Func.executeSQLReader(conn, sql, true);
 
                 if (read.HasRows)
                 {
@@ -49,18 +47,19 @@ namespace Recipehub
                     {
                         // Set cookie as user id for 30 days to identify the user
                         Response.SetCookie(Func.cookieSet("recipehub_user_id", read["user_id"].ToString(), 24 * 14));
-                        Response.Redirect("~/profile");
+                        Response.Redirect("~/Profile.aspx");
                         Response.End();
                     }
                     else
-                        err = "Either email or password is wrong";
+                        err = $"Either email or password is wrong1";
                 }
                 else
-                    err = "Either email or password is wrong";
+                    err = $"Either email or password is wrong2";
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+                err = ex.ToString();
             }
         }
 

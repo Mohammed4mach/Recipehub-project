@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Sign in.aspx.cs" Inherits="Recipehub.Sign_in" UnobtrusiveValidationMode="none" %>
+﻿<%@ Page Title="Sign in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Sign in.aspx.cs" Inherits="Recipehub.Sign_in" UnobtrusiveValidationMode="none" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <link rel="stylesheet" type="text/css" href="stylesheets/sign in.css">
@@ -9,7 +9,7 @@
     <div class="login_box">
         <img src="../assets/img/icons8-user-64.png" alt="user icon">
         <br>
-        <h1 class="sign_in_head"> Sign In</h1>
+        <h1 class="sign_in_head">Sign In</h1>
 
             <div class="input_box">
                 <asp:TextBox ID="email" runat="server" placeholder="E-mail"></asp:TextBox>
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <asp:Label runat="server" ID="errorLabel"></asp:Label>
+            <asp:Label runat="server" ID="errorLabel"><%= err %></asp:Label>
 
             <div class="input_box">
                 <asp:Button ID="submit" runat="server" Text="Sign in" OnClick="submit_Click"/>
@@ -36,7 +36,7 @@
             <br>
 
             <div class="sign_up text-center">
-                New here? <br /><a href="#">Sign Up</a>
+                New here? <br /><a href="Sign up.aspx">Sign Up</a>
             </div>
      
     </div>

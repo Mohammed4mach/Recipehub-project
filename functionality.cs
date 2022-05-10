@@ -8,10 +8,9 @@ using System.Web.Security;
 
 public class Func
 {
-    public static ArrayList executeSQL(MySqlConnection conn, string sql, bool fetch, params object[] parameters)
+    public static ArrayList executeSQL(MySqlConnection conn, string sql, bool fetch)
     {
         MySqlCommand cmd = new MySqlCommand(sql, conn);
-        cmd.Parameters.AddRange(parameters);
 
         if (fetch)
         {
@@ -37,7 +36,6 @@ public class Func
     public static MySqlDataReader executeSQLReader(MySqlConnection conn, string sql, bool fetch, params object[] parameters)
     {
         MySqlCommand cmd = new MySqlCommand(sql, conn);
-        cmd.Parameters.AddRange(parameters);
 
         MySqlDataReader read = cmd.ExecuteReader();
         return read;

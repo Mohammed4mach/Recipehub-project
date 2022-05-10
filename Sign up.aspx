@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Sign up.aspx.cs" Inherits="Recipehub.Sign_up" UnobtrusiveValidationMode="none" %>
+﻿<%@ Page Title="Sign up" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Sign up.aspx.cs" Inherits="Recipehub.Sign_up" UnobtrusiveValidationMode="none" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadPlaceHolder" runat="server">
     <link rel="stylesheet" type="text/css" href="stylesheets/sign up.css">
