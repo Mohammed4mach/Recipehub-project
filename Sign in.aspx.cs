@@ -15,9 +15,6 @@ namespace Recipehub
         public string err;
         protected void Page_Load(object sender, EventArgs e)
         {
-            // email.Text = null;
-            // password.Text = null;
-
             errorLabel.Text = err;
 
             if (Request.Cookies["recipehub_user_id"] != null)
@@ -39,7 +36,7 @@ namespace Recipehub
 
                 string sql = $"SELECT user_id, password FROM user WHERE email = '{user_email}'";
                 MySqlDataReader read = Func.executeSQLReader(conn, sql, true);
-
+                conn.Close();
                 if (read.HasRows)
                 {
                     read.Read();
@@ -55,12 +52,16 @@ namespace Recipehub
                 }
                 else
                     err = $"Either email or password is wrong2";
+
+                read.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
                 err = ex.ToString();
             }
+
+            email.Text = null;
+            password.Text = null;
         }
 
     }

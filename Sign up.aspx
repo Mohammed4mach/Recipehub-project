@@ -12,7 +12,7 @@
             
             <asp:FileUpload ID="user_img" runat="server" />
 
-            <label for="file" style="display: block;position: absolute;margin: 1px 0px 0px 125px;">Upload picture</label>
+            <label for="MainContent_user_img" style="display: block;position: absolute;margin: 1px 0px 0px 125px;">Upload picture</label>
             <div class="input_box">
             <asp:TextBox ID="username" placeholder="Username" runat="server"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="username"></asp:RequiredFieldValidator>
@@ -42,30 +42,24 @@
                 <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords do not match" ControlToValidate="confirm_password" ControlToCompare="password"></asp:CompareValidator>
                 <div class="icons"><i class="fas fa-lock"></i></div>
             </div>
-            <div class="input_box">
-<%--                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"  ErrorMessage="*" ControlToValidate="birth_date" ForeColor="Red"></asp:RequiredFieldValidator>--%>
-                <div class="icons"><i style="transform: translateY(-130%)" class="fas fa-calendar"></i></div>
+ <%--
+           <div class="input_box">
+                <input type="date" runat="server" ID="birth_date" required />
+            <div class="icons"><i style="transform: translateY(-130%)" class="fas fa-calendar"></i></div>
             </div>
-
-            <asp:RadioButton ID="male" Text="M" runat="server" GroupName="gender" required />
-            <asp:RadioButton ID="female" Text="F" runat="server" GroupName="gender" required />
+--%>
+            <asp:RadioButton ID="male" Text="Male" runat="server" GroupName="gender" required />
+            <asp:RadioButton ID="female" Text="Female" runat="server" GroupName="gender" required />
 
             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"  ErrorMessage="*" ControlToValidate="male" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server"  ErrorMessage="*" ControlToValidate="female" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+            
             <asp:DropDownList ID="country" runat="server">
-                <asp:ListItem runat="server">Alex</asp:ListItem>
-                <asp:ListItem runat="server">Cairo</asp:ListItem>
-                <asp:ListItem runat="server">Giza</asp:ListItem>
-                <asp:ListItem runat="server">Aswan</asp:ListItem>
             </asp:DropDownList>
             <asp:DropDownList ID="city" runat="server">
-                <asp:ListItem runat="server">Alex</asp:ListItem>
-                <asp:ListItem runat="server">Cairo</asp:ListItem>
-                <asp:ListItem runat="server">Giza</asp:ListItem>
-                <asp:ListItem runat="server">Aswan</asp:ListItem>
             </asp:DropDownList>
 
-            <asp:Label runat="server" ID="errorLabel"></asp:Label>
+            <asp:Label runat="server" ID="errorLabel"><%= err %></asp:Label>
 
             <asp:Button ID="submit" runat="server" Text="Sign up" OnClick="submit_Click"/>
         </div>

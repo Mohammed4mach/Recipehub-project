@@ -1,4 +1,4 @@
-/*
+ /*
     Tables Structure:
 
     - user [id, email, username, password, DoB, crDate, gender, country, city, picture, age]
@@ -11,7 +11,7 @@
 
     - menu [id, title]
 
-    - product [id, userId, name, picture, crDate, price, catId]
+    - product [id, userId, name, description,picture, crDate, price, catId]
 
     - recipe [id, prodId, userId, ingredients, time, cost, method, video, picture]
 
@@ -102,6 +102,7 @@ CREATE TABLE product
         res_id INT(9) UNSIGNED,
         cat_id INT(9) UNSIGNED,
         name VARCHAR(200) NOT NULL,
+        description TEXT(10000),
         picture VARCHAR(255) UNIQUE,
         create_date TIMESTAMP NOT NULL,
         price DECIMAL(6, 2),
@@ -193,18 +194,3 @@ CREATE TABLE res_menu
         FOREIGN KEY(prod_id) REFERENCES product(prod_id) ON DELETE CASCADE,
         CONSTRAINT pk_res_menu PRIMARY KEY(res_id, menu_id, prod_id)
     );
-    
-INSERT INTO user VALUES
-	(
-		1,
-		"hmoomh15@gmail.com",
-		"hmoomh15",
-        "pass123",
-		STR_TO_DATE("04-13-2000 11:30:00", "%m-%d-%Y %H:%i:%s"),
-        STR_TO_DATE("05-07-2022 19:38:00", "%m-%d-%Y %H:%i:%s"),
-        'M',
-        "Egypt",
-        "Alexandria",
-        NULL,
-        22
-	);

@@ -33,7 +33,7 @@ public class Func
         }
     }
 
-    public static MySqlDataReader executeSQLReader(MySqlConnection conn, string sql, bool fetch, params object[] parameters)
+    public static MySqlDataReader executeSQLReader(MySqlConnection conn, string sql, bool fetch)
     {
         MySqlCommand cmd = new MySqlCommand(sql, conn);
 
@@ -46,7 +46,7 @@ public class Func
         return FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
     }
 
-    public static long genId(int min, int max)
+    public static int genId(int min, int max)
     {
         Random rnd = new Random();
         return rnd.Next(min, max);
