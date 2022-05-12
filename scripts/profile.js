@@ -14,12 +14,9 @@ let nextButton = document.getElementById("next1"),
 
     page2 = document.getElementById("title2");
 
-
-
 imgScale.style.transform = "none";
 
 photoDiv.onclick=function(){
-
 
         if(imgScale.style.transform == "none"){
             imgScale.style.transform = "scale(2,2)";
@@ -82,4 +79,3 @@ prevButton.onclick=function()
     nextButton.style.visibility = "visible";
 
 }
-

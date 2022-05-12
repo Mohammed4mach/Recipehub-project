@@ -115,7 +115,7 @@
     <Content Include="Category.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Profile Settings.aspx" />
-    <Content Include="Profile.aspx" />
+    <Content Include="Profile Page.aspx" />
     <Content Include="Recipe.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Sign in.aspx" />
@@ -152,12 +152,12 @@
     <Compile Include="Profile Settings.aspx.designer.cs">
       <DependentUpon>Profile Settings.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+    <Compile Include="Profile Page.aspx.cs">
+      <DependentUpon>Profile Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+    <Compile Include="Profile Page.aspx.designer.cs">
+      <DependentUpon>Profile Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recipe.aspx.cs">

@@ -22,7 +22,7 @@
     display: inline-block;
     font-size: 24px;
 }
-.tap .fa{
+.tap .svg-inline--fa{
     width:30px;
     height: 30px;
     font-size: 30px;
@@ -78,7 +78,7 @@
     -o-transition:10s;
     transition:10s
 }
-.personal-photo .photo-hover .fa{
+.personal-photo .photo-hover .svg-inline--fa{
    color:rgb(255, 108, 34);
    font-size: 20px;
    margin:auto;
@@ -116,31 +116,34 @@
     padding:10px;
     margin-left:20px;
 }
-.more-description .same .fa{
+.more-description .same .svg-inline--fa{
     padding-right:5px
 }
 .edit, .logout{
     margin-bottom: 20px;
     text-align: center;
 }
-.logout button,
-.edit button{
+.logout a,
+.edit a{
+    display: inline-block;
     width:60%;
     height:32px;
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
     border: none;
+    color: rgba(10, 10, 10, 0.9);
+    text-decoration: none;
 }
-.edit button{
+.edit a{
     margin-top: 30px;
     background:linear-gradient(rgb(252, 143, 89), rgb(255, 108, 34));
 }
-.logout button{
+.logout a{
     background:linear-gradient(rgb(248, 110, 79), rgb(255, 60, 34));
 }
-.logout button:hover,
-.edit button:hover{
+.logout a:hover,
+.edit a:hover{
     background: #000;
     color:rgb(255, 108, 34)
 }
@@ -222,8 +225,8 @@
 .next.disapled{
    visibility: hidden;
 }
-.prev .fa,
-.next .fa{
+.prev .svg-inline--fa,
+.next .svg-inline--fa{
     position:absolute;
     width: 100%;
     height:100%;
@@ -232,10 +235,10 @@
     cursor: pointer;
     border-radius: 50%;
  }
- .prev .fa{
+ .prev .svg-inline--fa{
      left: 0;
  }
- .next .fa{
+ .next .svg-inline--fa{
      right:0;
  }
  .prev:hover, .next:hover{

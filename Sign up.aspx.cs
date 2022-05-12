@@ -17,12 +17,10 @@ namespace Recipehub
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            password.Text = null;
-            confirm_password.Text = null;
 
             if (Request.Cookies["recipehub_user_id"] != null)
             {
-                Response.Redirect("~/profile.aspx");
+                Response.Redirect("~/Profile Page.aspx");
                 Response.End();
             }
 
@@ -76,9 +74,9 @@ namespace Recipehub
             char user_gender;
 
             if (male.Checked)
-                user_gender = male.Text[0];
+                user_gender = male.Text[male.Text.Length - 4];
             else
-                user_gender = female.Text[0];
+                user_gender = female.Text[female.Text.Length - 6];
 
             /* Start validation */
             // Open Connection
@@ -110,7 +108,7 @@ namespace Recipehub
                 {
                     readEmail.Close();
                     conn.Close();
-                    err = "Email address is already registered";
+                    err = "Email address is already registered __ " + password.Text;
                 }
                 else
                 {
@@ -129,7 +127,7 @@ namespace Recipehub
                         user_picture = Server.MapPath("~/uploads/pictures/users/") + user_id.ToString() + extension;
                         user_img.SaveAs(user_picture);
                         // File.WriteAllBytes(Server.MapPath("~/") + user_img.PostedFile.FileName, user_img.FileBytes);
-                        user_picture = user_picture.Replace("\\", "/");
+                        user_picture = "./uploads/pictures/users/" + user_id.ToString() + extension;
                         sql = $"INSERT INTO user(user_id, email, username, password, birth_date, create_date, gender, country, city, picture, age) VALUES ({user_id}, '{user_email}', '{user_username}', '{user_password}', STR_TO_DATE('{create_date}', '%m-%d-%Y %H:%i:%s'), STR_TO_DATE('{create_date}', '%m-%d-%Y %H:%i:%s'), '{user_gender}', '{user_country}', '{user_city}', '{user_picture}', {user_age})";
                     }
                     else
@@ -139,7 +137,7 @@ namespace Recipehub
 
                     // Set cookie as user id for 30 days to identify the user
                     Response.SetCookie(Func.cookieSet("recipehub_user_id", user_id.ToString(), 24 * 14));
-                    Response.Redirect("~/Profile.aspx");
+                    Response.Redirect("~/Profile Page.aspx");
 
                     conn.Close();
                     Response.End();

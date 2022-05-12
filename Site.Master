@@ -34,8 +34,6 @@
 <body>
     <form runat="server">
 
-
-
         <nav class="navbar navbar-expand-lg navbar-expand-em">
 
             <div class="container-fluid">
@@ -46,48 +44,55 @@
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
 
-                  <span class="navbar-toggler-icon"></span>
-                
+                  <span class="navbar-toggler-icon"></span>                
+
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                    
                       <li class="nav-item">
                    
-                           <a class="nav-link  p-lg-3" aria-current="page" href="sign up.aspx">Sign Up</a>
+                        <a class="nav-link  p-lg-3" aria-current="page" href="sign up.aspx">
+                            <i class="fa-solid fa-user-plus"></i>
+                            Sign Up
+                        </a>
                     
                       </li>
                     
                       <li class="nav-item">
                     
-                          <a class="nav-link p-lg-3" href="sign in.aspx"> Sign In</a>
+                        <a class="nav-link p-lg-3" href="sign in.aspx">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            Sign In
+                        </a>
                     
                       </li>
                     
                       <li class="nav-item">
-                    
-                          <a class=" nav-link disabled p-lg-3">Profile</a>
-                    
+
+                        <a class="nav-link p-lg-3" href="Profile Page.aspx">
+                            <i class="fa-regular fa-user"></i>
+                            Profile
+                        </a>
+
                       </li>
 
                     
-                      <li class="nav-item dropdown">
-                    
-                          <a class="nav-link dropdown-toggle p-lg-3"
-                             href="#" id="navbarDropdown" role="button"
-                             data-bs-toggle="dropdown" aria-expanded="false">
-                              Category
-                          </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle p-lg-3"
+                            href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-bookmark"></i> Category
 
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>  
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
                 </ul>
                     <asp:TextBox ID="search_input" runat="server" placeholder="Search" aria-label="Search"></asp:TextBox>
                     <asp:Button ID="search_submit" runat="server" Text="Search" class="btn btn-outline-success" OnClick="search_submit_Click"/>
@@ -95,11 +100,10 @@
             </div>
         </nav>
 
-
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
 
-        <footer class=" bg-dark text-white pt-5 pb-4 ">
+        <footer class=" bg-dark text-white">
             <div class="container text-center text-md-left">
             <div class="row text-center text-md-left">
             <div class="col-md-3 col-lg-3 col-xl-3 md-auto mt-3"> 
@@ -139,9 +143,9 @@
 
         </div>
     </footer>
-        
     
     </form>
+
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/all.min.js"></script>
 

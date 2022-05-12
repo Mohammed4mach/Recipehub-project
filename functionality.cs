@@ -8,7 +8,7 @@ using System.Web.Security;
 
 public class Func
 {
-    public static ArrayList executeSQL(MySqlConnection conn, string sql, bool fetch)
+    public static ArrayList executeSQL(MySqlConnection conn, string sql, bool fetch = true)
     {
         MySqlCommand cmd = new MySqlCommand(sql, conn);
 
@@ -33,7 +33,7 @@ public class Func
         }
     }
 
-    public static MySqlDataReader executeSQLReader(MySqlConnection conn, string sql, bool fetch)
+    public static MySqlDataReader executeSQLReader(MySqlConnection conn, string sql, bool fetch = true)
     {
         MySqlCommand cmd = new MySqlCommand(sql, conn);
 
