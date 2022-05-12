@@ -1,47 +1,86 @@
 body{
-    background: linear-gradient(rgb(25, 24, 24, 0.5),rgb(59, 51, 51)),url(../img/background.jpg);
-    
+    background: linear-gradient(rgb(25, 24, 24, 0.5),rgb(59, 51, 51)),url(../img/background.jpg) no-repeat;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    background-size: cover;
+    background-position: center;
 }
+
 .container{
     box-shadow: 0 0 10px rgba(28, 1, 1, 0.7);
     padding: 30px;
-    /*margin-left: 450px;
-    margin-top: 30px;
-    margin-right: 20px;*/
     margin: 30px 20px 35px 450px;
     width: 500px;
     background-color: #fff;
-  
     border-radius: 5px;
-    position: relative;
-
-
- 
+    position: relative; 
 }
+
 .time{
     margin-bottom: 10px;
+    font-weight: bold;
 }
-img{
-    position: sticky;
-    top: 20%;
+.price
+{
+    font-weight: bold;
+}
+.recipe-img{
+   margin: auto;
+   margin-left: -5px;
 }
 
-h3{
+.heading{
     text-align: center;
 }
 
-hr{
+.saperatore{
     margin: 10px 0;
     border: none;
     background-color: rgb(255, 122, 55);
     height: 2px;
 }
 
-li{
+.paragraph{
     font-size: 15px;
 }
-p{
-    font-family: 'Oleo Script Swash Caps', cursive;
+.headlines
+{
+    color:#e75b1e;
+    font-weight: bold;
 }
+
+.video-link:hover{
+    color:#e75b1e;
+}
+
+.video-link
+{
+  display: block; 
+  color:black;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+/*button*/
+.favorite-btu{
+    color:#e75b1e;
+    background-color: black;
+    padding: 5px;   
+    width: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 0.25rem;
+    line-height: 1.5;
+}
+.favorite-btu:hover{
+    color:white;
+    background-color: #e75b1e;
+    border: none;
+    
+}
+
+.link-buttons{
+    margin-left:160px ;
+
+}
+/* end button*/
