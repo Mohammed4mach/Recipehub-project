@@ -34,7 +34,6 @@ body{
     bottom: 0;
     background-color: rgba(119, 65, 38, 0.9);
     z-index: 1;
-    
 }
 .container{
     padding: 10px 50px;
@@ -70,7 +69,10 @@ body{
     border-radius: 50%;
     padding-top: 5px;
     cursor: pointer;
-    transition:.5s
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s;
 }
 .photo .photo-change:hover{
     background-color:rgb(255, 108, 34, .6);
@@ -82,7 +84,6 @@ body{
     color:#FFF;
     align-items: center;
 }
-/*----------------------------------------*/
 .same{
     margin: 10px;
     padding:10px;
@@ -92,6 +93,9 @@ body{
 .same h5{
     color:rgb(255, 108, 34);
     margin-bottom: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
     user-select: none;
 }
 .same .description-child{
@@ -112,6 +116,9 @@ body{
     padding-top: 5px;
     border-radius: 3px;
     cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 .same .description-child .edit-buttton .fa{
@@ -127,9 +134,6 @@ body{
     background-color:rgb(255, 108, 34)
 }
 @media (max-width:1000px){
-    /*.description-text{
-        max-width: 350px;
-    }*/
     .container{
         padding: 10px 20px;
     }
@@ -161,7 +165,6 @@ body{
 .account{
     border: none;
 }
-/*--------------------------*/
 .maximize-photo{
     position: absolute;
     height:100%;
@@ -227,6 +230,9 @@ body{
 .SamePanel .info .buttons{
     text-align: right;
     margin-right: 20%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
     user-select: none;
 }
 .SamePanel .info .buttons .cancel,
@@ -274,7 +280,6 @@ body{
     margin-top:10px;
     color:#FFF;
 }
-
 .edit-password{
     height:400px;
 }
