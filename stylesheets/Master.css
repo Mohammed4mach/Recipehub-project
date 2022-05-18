@@ -1,18 +1,16 @@
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-		position: relative
+	position: relative
 }
 
 /*navbar start*/
+
 .navbar{
     background-color: black;
     height: 75px;
 }
-.navbar + *
-{
-		margin-top: 75px;
-}
+
 .navbar-brand{
     font-family: 'Tapestry', cursive;
     font-size: 30px;
@@ -20,6 +18,7 @@ body{
     margin-right: 30px;
     margin-left: 30px;
 }
+
 .navbar-brand:hover{
     color: #e75b1e;
 }
@@ -31,7 +30,9 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     transition: all 0.2s  ease-in-out;
 }
+
 /*links*/
+
 .navbar .navbar-nav .nav-link:hover
 {
     color:#e75b1e;
@@ -50,24 +51,30 @@ body{
     color: #e75b1e;
     border-color: #e75b1e;
 }
+
 .btn-outline-success:hover{
     color: white;
     background-color: #e75b1e;
     border: 1px solid #e75b1e;
 }
+
 .dropdown-menu {
     color:  var(--bs-orange);
     background: #333;
 }
+
 .dropdown-item{
     color: white;
 }
 /*navbar ended*/
 
-
 /*start footer*/
 
-footer {width: 100%}
+footer
+{
+    width: 100%;
+    max-height:auto;
+}
 
 footer, footer > div, footer > div > div
 {
@@ -75,12 +82,13 @@ footer, footer > div, footer > div > div
 		justify-content: center;
 }
 
-footer h5 {
+footer h5 
+{
     margin-top: 2em;
     margin-bottom: .5rem;
     font-weight: 500;
     line-height: 1.2;
-  }
+}
 
 footer .text-uppercase.font-weight-bold
 {
@@ -90,4 +98,5 @@ footer .text-uppercase.font-weight-bold
   .owner{
       color: #e75b1e;
   }
+
 /*end footer*/

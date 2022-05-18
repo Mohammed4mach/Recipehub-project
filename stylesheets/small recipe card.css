@@ -1,0 +1,68 @@
+.card
+{
+    margin: auto 50px;
+    border: 2px rgb(207, 201, 201) solid;
+    width:260px;
+    background-color: rgb(248, 245, 245);
+    color: black;
+    padding:16px;
+    border-radius:5px;
+    user-select: none;
+}
+.recipe-photo
+{
+    margin-left: 15px;
+    width: 230px;
+    height:170px;
+}
+.title
+{
+    text-align: center;
+    margin: 10px 10px;
+}
+.recipe-informatin .recipe-main-info .title hr
+{
+    margin:10px 0;
+    border:none;
+    background-color:rgb(255, 122, 55);
+    height: 2px;
+}
+.cost
+{
+    color:rgb(255, 122, 55);
+    font-weight: bold;
+    font-size: 20px;
+    margin-left:15px;
+}
+.time
+{
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    margin:10px 0 10px 15px;
+}
+.recipe-informatin p
+{
+    font-size: 18px;
+    margin:10px 15px;
+}
+.recipe-informatin p span
+{
+    display:block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom:10px ;
+}
+.recipe-informatin a
+{
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 15px 15px;
+    text-align: left;
+    font-size: 18px;
+    text-decoration: none;
+}
+.recipe-informatin a:hover
+{
+    color: rgb(255, 122, 55);
+}

@@ -1,0 +1,307 @@
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.up-container{
+    position: relative;
+}
+.tap{
+    height: 45px;
+    width:100%;
+    background-color: #000;
+    color:rgb(255, 108, 34);
+    font-weight: bold;
+    font-size: 20px;
+    padding:10px 20px;
+}
+.tap .prev{
+    margin-right: 20px;
+    display: inline-block;
+}
+.tap span{
+   display: inline-block;
+}
+.hidden{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(119, 65, 38, 0.9);
+    z-index: 1;
+}
+.container{
+    padding: 10px 50px;
+}
+.photo{
+    margin:40px 10px 40px;
+    user-select: none;
+    padding:10px;
+}
+.photo .personal-photo{
+    margin: auto;
+    position: relative;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.photo .personal-photo img{
+    position: absolute;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
+.photo .photo-change{
+    position: absolute;
+    bottom: 5px;
+    right:5px;
+    background-color: rgb(255, 108, 34);
+    z-index: 0;
+    width:28px;
+    height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 5px;
+    cursor: pointer;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -o-transition:.5s;
+    transition:.5s;
+}
+.photo .photo-change:hover{
+    background-color:rgb(255, 108, 34, .6);
+}
+.photo .photo-change:active{
+    background-color: rgb(255, 108, 34);
+}
+.photo .photo-change .fa{
+    color:#FFF;
+    align-items: center;
+}
+.same{
+    margin: 10px;
+    padding:10px;
+    border-bottom: 1px solid rgb(255, 108, 34);
+    padding-bottom: 30px;
+}
+.same h5{
+    color:rgb(255, 108, 34);
+    margin-bottom: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.same .description-child{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.same .description-text p{
+    color:rgb(173, 173, 173);
+    margin:10px 0;
+    font-size: 12px;
+}
+.same .description-child .edit-buttton{
+    width:30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.same .description-child .edit-buttton .fa{
+    color:rgb(255, 108, 34);
+}
+.same .description-child .edit-buttton:hover{
+    background-color:rgb(255, 108, 34, .4);
+}
+.same .description-child .edit-buttton:hover .fa{
+    color: #FFF;
+}
+.same .description-child .edit-buttton:active{
+    background-color:rgb(255, 108, 34)
+}
+@media (max-width:1000px){
+    .container{
+        padding: 10px 20px;
+    }
+}
+.description-text .fa,
+.description-text span{
+    display: inline-block;
+}
+.description-text .fa{
+    margin-right: 5px;
+}
+.account button{
+    display: block;
+    margin-top: 20px;
+    background-color:rgb(255, 108, 34);
+    cursor:pointer;
+    border: none;
+    width:200px;
+    text-align: center;
+    height:30px;
+    border-radius: 5px;
+    font-weight: bold;
+    color:#FFF
+}
+.account button:hover{
+    background-color: #000;
+    color:rgb(255, 108, 34);
+}
+.account{
+    border: none;
+}
+.maximize-photo{
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: #000;
+    top:0;
+    text-align: center;
+    z-index: 3;
+}
+.maximize-photo .sub-tap{
+    color:rgb(255, 108, 34);
+    font-weight: bold;
+    height: 50px;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 15px 20px 10px 40px;
+}
+.maximize-photo .sub-tap span{
+    font-size: 20px;
+}
+.maximize-photo .sub-tap .fa{
+    color: rgb(255, 108, 34);
+    text-align: center;
+    cursor:pointer;
+    font-size: 34px;
+    display: inline-block;
+}
+.maximize-photo img{
+    margin-top:110px;
+}
+.SamePanel{
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height:270px;
+    z-index: 2;
+}
+.SamePanel .tap{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.SamePanel .tap .close{
+    cursor: pointer;
+}
+.SamePanel .info{
+    text-align: center;
+}
+.SamePanel .info input{
+    color:rgb(255, 108, 34);
+    height:30px;
+    width:70%;
+    border:none;
+    border: 1px solid rgb(255, 108, 34);
+    background-color: #000;
+    margin:50px 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.SamePanel .info .buttons{
+    text-align: right;
+    margin-right: 20%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.SamePanel .info .buttons .cancel,
+.SamePanel .info .buttons .save{
+    background:linear-gradient(rgb(255, 108, 34),rgb(116, 49, 10));
+    height: 25px;
+    width:80px;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 5px;
+    margin:0 5px;
+    cursor: pointer
+}
+.SamePanel .info .buttons .cancel:hover,
+.SamePanel .info .buttons .save:hover{
+    background: rgb(255, 108, 34);
+}
+.edit-photo .info .choices{
+    display: flex;
+    justify-content: space-between;
+    margin:50px auto 30px;
+    width: 200px;
+}
+.edit-photo .info .choices .option{
+    text-align: center;
+}
+.edit-photo .info .choices .option > div{
+    width:50px;
+    height:50px;
+    background:linear-gradient(rgb(255, 108, 34),rgb(116, 49, 10));
+    font-size:30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+.edit-photo .info .choices .option > div:hover{
+    background: rgb(255, 108, 34);
+    color:#FFF
+}
+.edit-photo .info .choices .option span{
+    color:rgb(255, 108, 34);
+    font-style: italic;
+}
+.edit-photo .info .choices .option >div .fa{
+    margin-top:10px;
+    color:#FFF;
+}
+.edit-password{
+    height:400px;
+}
+.edit-password .info{
+    text-align: left;
+    width:70%;
+    margin:30px auto;
+}
+.edit-password .info .new-password,
+.edit-password .info .confirm-password{
+    padding:10px;
+    height:100px;
+}
+.edit-password .info .new-password span,
+.edit-password .info .confirm-password span{
+    color:rgb(255, 108, 34);
+}
+.edit-password .info input{
+    display: block;
+    width:100%;
+    margin:10px 0 0 0;
+}
+.edit-password .info .buttons{
+    margin-top:20px;
+}

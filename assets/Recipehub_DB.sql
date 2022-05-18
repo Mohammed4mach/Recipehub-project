@@ -1,4 +1,4 @@
-/*
+ /*
     Tables Structure:
 
     - user [id, email, username, password, DoB, crDate, gender, country, city, picture, age]
@@ -11,9 +11,9 @@
 
     - menu [id, title]
 
-    - product [id, userId, name, picture, crDate, price, catId]
+    - product [id, userId, name, description,picture, crDate, price, catId]
 
-    - recipe [id, prodId, userId, ingredients, time, cost, method, video]
+    - recipe [id, prodId, userId, ingredients, time, cost, method, video, picture]
 
     - category [id, name, picture, region, country]
 
@@ -25,7 +25,9 @@
 
     - like [userId, prodId]
 
-    - follow [userId, resId]
+    - follow_res [flwr_userId, flw_resId]
+    
+    - follow_usr [flwr_userId, flw_userId]
 
     - res_menu [resId, menuId, prodId]
 
@@ -100,6 +102,7 @@ CREATE TABLE product
         res_id INT(9) UNSIGNED,
         cat_id INT(9) UNSIGNED,
         name VARCHAR(200) NOT NULL,
+        description TEXT(10000),
         picture VARCHAR(255) UNIQUE,
         create_date TIMESTAMP NOT NULL,
         price DECIMAL(6, 2),
@@ -117,8 +120,9 @@ CREATE TABLE recipe
         ingredients TEXT(2500) NOT NULL,
         time INT(4),
         cost DECIMAL(6, 2),
-        method TEXT(10000) NOT NULL,
+        method TEXT(10000),
         video VARCHAR(255),
+        picture VARCHAR(255),
         FOREIGN KEY(prod_id) REFERENCES product(prod_id) ON DELETE CASCADE,
         FOREIGN KEY(user_id) REFERENCES user(user_id) ON DELETE CASCADE,
         FOREIGN KEY(res_id) REFERENCES restaurant(res_id) ON DELETE CASCADE
@@ -162,13 +166,22 @@ CREATE TABLE likes
         CONSTRAINT pk_like PRIMARY KEY(user_id, prod_id)
     );
 
-CREATE TABLE follow
+CREATE TABLE follow_res
     (
-        user_id INT(9) UNSIGNED,
-        res_id INT(9) UNSIGNED,
-        FOREIGN KEY(user_id) REFERENCES user(user_id) ON DELETE CASCADE,
-        FOREIGN KEY(res_id) REFERENCES restaurant(res_id) ON DELETE CASCADE,
-        CONSTRAINT pk_follow PRIMARY KEY(user_id, res_id)
+        flwr_user_id INT(9) UNSIGNED,
+        flw_res_id INT(9) UNSIGNED,
+        FOREIGN KEY(flwr_user_id) REFERENCES user(user_id) ON DELETE CASCADE,
+        FOREIGN KEY(flw_res_id) REFERENCES restaurant(res_id) ON DELETE CASCADE,
+        CONSTRAINT pk_follow PRIMARY KEY(flwr_user_id, flw_res_id)
+    );
+
+CREATE TABLE follow_usr
+    (
+        flwr_user_id INT(9) UNSIGNED,
+        flw_user_id INT(9) UNSIGNED,
+        FOREIGN KEY(flwr_user_id) REFERENCES user(user_id) ON DELETE CASCADE,
+        FOREIGN KEY(flw_user_id) REFERENCES user(user_id) ON DELETE CASCADE,
+        CONSTRAINT pk_follow PRIMARY KEY(flwr_user_id, flw_user_id)
     );
 
 CREATE TABLE res_menu

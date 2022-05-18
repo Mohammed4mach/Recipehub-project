@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings</title>
+        <link rel="stylesheet" href="../stylesheets/settings.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="up-container">
+            <div id="background" class="hidden"></div>
+            <div id="container-id" class="container">
+                <div class="photo">
+                    <div class="personal-photo">
+                        <img id="personal-photo-id" src="../assests/profile.jfif">
+                        <div id="edit-photo" class="photo-change">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-name same">
+                    <h5>Username</h5>
+                    <div class="description-child">
+                        <div class="description-text">
+                            <span>Anna Gonzalez</span>
+                        </div>
+                        <div id="write-name" class="edit-buttton">
+                            <i class="fa fa-pen"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="account same">
+                    <h5>Password</h5>
+                    <div class="description-child">
+                        <div class="description-text">
+                            <i class="fa fa-lock"></i>
+                            <span>Anna266</span>
+                            <button id="edit-password">Changing Password</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="maximize-photo-id" class="maximize-photo">
+            <div class="sub-tap">
+                <span>Personal photo</span>
+                <i id="close-id" class="fa fa-xmark"></i>
+            </div>
+            <img src="../assests/profile.jfif">
+        </div>
+        <div id="changePhoto-panel" class="edit-photo SamePanel">
+            <div class="tap">
+                <span>Change Photo</span>
+                <div id="close-changePhoto-panel-id" class="close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+            </div>
+            <div class="info">
+                <div class="choices">
+                    <div class="camera option">
+                        <div><i class="fa fa-camera"></i></div>  
+                        <span>camera</span>   
+                    </div>
+                    <div class="gallary option">
+                        <div><i class="fa fa-image"></i></div>
+                        <span>gallary</span>
+                    </div>
+                    <div class="delete option">
+                        <div><i class="fa fa-trash-can"></i></div>
+                        <span>delete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="name-panel" class="edit-name SamePanel">
+            <div class="tap">
+                <span>Name</span>
+                <div id="close-name-panel-id" class="close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+            </div>
+            <div class="info">
+                <input type="text">
+                <div class="buttons">
+                    <button class="cancel">Cancel</button>
+                    <button class="save">Save</button>
+                </div>
+            </div>
+        </div>
+        <div id="password-panel" class="edit-password SamePanel">
+            <div class="tap">
+                <span>Change Password</span>
+                <div id="close-password-panel-id" class="close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+            </div>
+            <div class="info">
+                <div class="new-password">
+                    <span>Enter New Password</span>
+                    <input type="password">
+                </div>
+                <div class="confirm-password">
+                    <span>Confirm The Password</span>
+                    <input type="password">
+                </div>
+                <div class="buttons">
+                    <button class="cancel">Cancel</button>
+                    <button class="save">Save</button>
+                </div>
+            </div>
+        </div>
+        <script src="../scripts/settings.js"></script>
+    </body>
+</html>
