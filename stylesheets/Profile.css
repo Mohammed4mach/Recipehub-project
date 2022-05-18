@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body
+{
+    background: #fff;
+    background-image: none;
+}
+#profile{
+   position: relative;
+}
+.tap{
+    background-color:rgb(30, 24, 19);
+    width: 100%;
+    height:50px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 7px rgb(143, 143, 143);
+}
+.tap h3{
+    color:rgb(255, 108, 34) ;
+    display: inline-block;
+    font-size: 24px;
+}
+.tap .svg-inline--fa{
+    width:30px;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color:rgb(255, 108, 34);
+    font-weight: bold;
+    margin-left: 10px;
+    float: left;
+}
+.personal-info{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding:50px 0 0px;
+    width:100%;
+}
+.description{
+    text-align: center;
+}
+.personal-info .description .personal-photo{
+    border-radius: 50%;
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin:0 auto 20px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.personal-info .description .personal-photo img{
+    position: absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.personal-photo .photo-hover{
+    display: none;
+    text-align: center;
+    align-items: center;
+    background:linear-gradient(rgba(93, 92, 91, 0.5), #000) ;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    -webkit-transition: 10s;
+    -moz-transition: 10s;
+    -o-transition:10s;
+    transition:10s
+}
+.personal-photo .photo-hover .svg-inline--fa{
+   color:rgb(255, 108, 34);
+   font-size: 20px;
+   margin:auto;
+}
+.personal-info .description .personal-photo:hover .photo-hover{
+    -webkit-transition: 5s;
+    -moz-transition:5s;
+    -o-transition:5s;
+    transition:5s;
+    display: flex;
+}
+.personal-info .description .name p{
+    margin:20px 0;
+}
+.personal-info .followers ,
+.personal-info .following {
+    text-align: center;
+    margin-top:70px;
+    font-weight: bold;
+}
+.personal-info .followers p,
+.personal-info .following p,
+.follow-section-container h2
+{
+    font-size: 20px;
+    margin:10px 0;
+    text-shadow:2px 2px 4px rgb(100, 100, 100);
+    color: rgb(255, 108, 34);
+    cursor: pointer;
+}
+.more-description{
+    padding:40px 0 20px;
+    color:rgb(255, 108, 34);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.more-description .same{
+    padding:10px;
+    margin-left:20px;
+}
+.more-description .same .svg-inline--fa{
+    padding-right:5px
+}
+.edit, .logout{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.logout a,
+.edit a{
+    display: inline-block;
+    width:60%;
+    height:32px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    color: rgba(10, 10, 10, 0.9);
+    text-decoration: none;
+}
+.edit a{
+    margin-top: 30px;
+    background:linear-gradient(rgb(252, 143, 89), rgb(255, 108, 34));
+}
+.logout a{
+    background:linear-gradient(rgb(248, 110, 79), rgb(255, 60, 34));
+}
+.logout a:hover,
+.edit a:hover{
+    background: #000;
+    color:rgb(255, 108, 34)
+}
+
+.follow-btn
+{
+    width: 140px;
+    padding: 12px;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.follow-btn:hover
+{
+    color: white;
+    background-color: rgb(255, 50, 0);
+}
+.follow-btn.follow-btn_followed
+{
+    background-color: gray;
+}
+.follow-btn.follow-btn_followed:hover
+{ background-color: #777 }
+
+.titles{
+    display: flex;
+}
+.favorite, .posts{
+    margin-top: 10px;
+    color: rgb(255, 108, 34);
+    height:40px;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select:none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor:pointer;
+}
+.favorite a, .posts a
+{
+    color: rgb(255, 108, 34);
+    text-decoration: none;
+}
+.up-container{
+    display:flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+.container{
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 75%;
+    position: relative;
+}
+.up-prev{
+    margin-left: 70px;
+}
+.up-next{
+    margin-right: 70px;
+}
+.recipe-photo img{
+    width: 230px;
+    height:170px;
+}
+.recipe-informatin .recipe-main-info .title{
+    text-align: center;
+    margin: 10px 10px;
+}
+.recipe-informatin .recipe-main-info .title hr{
+    margin:10px 0;
+    border:none;
+    background-color:rgb(255, 122, 55);
+    height: 2px;
+}
+.recipe-informatin .cost{
+    color:rgb(255, 122, 55);
+    font-weight: bold;
+    font-size: 20px;
+    margin-left:15px;
+}
+.recipe-informatin .time{
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin:10px 0 10px 15px;
+}
+.recipe-informatin p{
+    font-size: 12px;
+    margin:10px 15px;
+}
+.recipe-informatin p span{
+    display:block;
+    font-weight: bold;
+}
+.recipe-informatin a{
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 15px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+.cards-container .card.active{
+    opacity:1;
+}
+@media (max-width:1000px){
+    .up-prev{
+        margin-left: 0;
+    }
+    .up-next{
+        margin-right: 0;
+    }
+    .prev, .next{
+        visibility: visible;
+    }
+    .followers{
+        margin-left:10px
+    }
+    .following{
+        margin-right: 10px;
+    }
+}
+
+.add-product
+{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.add-product-btn
+{
+    width: 140px;
+    padding: 12px;
+    margin: 50px 40px 20px 0;
+    margin-top: 50px;
+    margin-right: 40px;
+    display: block;
+    text-align: center;
+    background-color: rgb(0, 170, 0);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.add-product-btn:hover
+{
+    color: white;
+    background-color: rgb(0, 190, 0);
+}
+
+#posts, #favorites
+{
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+#posts, #favorites, .add-product
+{
+    background: #eee
+}
+
+#posts:target, #favorites:target
+{ display: flex }
+
+.main
+{
+    border-radius: 5px;
+    transform: scale(0.9);
+    max-width: fit-content;
+}
+
+.img-prod
+{
+    margin: 40px auto 15px;
+}
+
+.main .heading a
+{
+    text-decoration: none;
+}
+
+.follow-section-container
+{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 50px;
+    background-color: #2228;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10000;
+}
+
+.follow-section-header
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    background-color: #9899;
+    border-radius: 10px 10px 0 0;
+    backdrop-filter: blur(4px);
+}
+.follow-section-header h2
+{
+    font-size: 35px;
+    cursor: default;
+}
+.follow-section-header .close-panel
+{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 30px;
+    transform: translateY(-50%);
+    width: 50px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 200;
+    color: #ddd;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.follow-section-header .close-panel:hover
+{
+    background-color:rgba(255, 30, 0, 0.9);
+}
+
+
+.follow-section
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 600px;
+    padding: 40px;
+    overflow-y: auto;
+    border-radius: 0 0 10px 10px;
+    background:linear-gradient(to right bottom,rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    backdrop-filter: blur(4px);
+}
+
+
+/* Start follow-section scroll-bar*/
+/* width */
+.follow-section::-webkit-scrollbar 
+{
+    width: 8px;
+}
+
+/* Track */
+.follow-section::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 1px 20px transparent;/* Hide Track */
+    border-radius: 4px;
+}
+
+/* Track apear on hover*/
+.follow-section::-webkit-scrollbar-track:hover
+{
+    background-color: rgb(255,255,255,0.1);
+}
+
+/* Handle */
+.follow-section::-webkit-scrollbar-thumb {
+    background: darkorange;
+    border-radius: 4px;
+}
+/* End scroll-bar*/
