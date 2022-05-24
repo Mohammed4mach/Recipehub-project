@@ -1,0 +1,273 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#recipe-card-section{
+    background: linear-gradient(rgb(25, 24, 24, 0.5),rgb(59, 51, 51)),url('../assets/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 760px;
+    padding:80px 0;    
+    position: relative;
+}
+.disciption{
+    text-align: center;
+    width:870px;
+    margin:0 auto 15px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Great+Vibes&family=Ingrid+Darling&display=swap');
+
+.disciption h1{
+    font-size: 55px;
+    color: rgb(255, 122, 55);
+    font-family: 'Courgette', cursive;
+}
+.disciption p{
+    color:#FFF;
+    margin: 20px 0;
+}
+.up-container{
+    display:flex;
+    justify-content: space-between;
+}
+.container{
+    height:440px;
+    display: flex;
+    overflow: hidden;
+    width: 75%;
+    margin:0 auto;
+    position: relative;
+}
+.cards-container{
+    padding: 16px ;
+    display: flex;
+    flex-wrap: nowrap;
+    position:absolute;
+    height:100%;
+    z-index: 0;
+    overflow: hidden;
+    transition: 1.5s;
+    -webkit-animation: moving 12s infinite;
+    -o-animation: moving 12s infinite;
+    -moz-animation: moving 12s infinite;
+    animation:moving 12s infinite;
+}
+@-webkit-keyframes moving{
+    0%,100%{
+        left: 0;
+    }
+    25%{
+        left:-600px;
+    }
+    50%{
+        left:-1250px;
+    }
+    75%{
+        left:-600px;
+    }
+}
+@-moz-keyframes moving{
+    0%,100%{
+        left: 0;
+    }
+    25%{
+        left:-600px;
+    }
+    50%{
+        left:-1250px;
+    }
+    75%{
+        left:-600px;
+    }
+}
+@-o-keyframes moving{
+    0%,100%{
+        left: 0;
+    }
+    25%{
+        left:-600px;
+    }
+    50%{
+        left:-1250px;
+    }
+    75%{
+        left:-600px;
+    }
+}
+@keyframes moving{
+    0%,100%{
+        left: 0;
+    }
+    25%{
+        left:-600px;
+    }
+    50%{
+        left:-1250px;
+    }
+    75%{
+        left:-600px;
+    }
+}
+
+.up-prev{
+    margin-left: 70px;
+}
+.up-next{
+    margin-right: 70px;
+}
+.prev, .next{
+    color:rgb(255, 122, 55) ;
+    background-color:rgb(255, 122, 55, .1) ;
+    text-align: center;
+    width: 60px;
+    height:60px;
+    margin-top:130px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .3s;
+    z-index: 1;
+    position: relative;
+}
+.next{
+    right:0;
+}
+.next.active{
+    color:rgb(255, 122, 55) ;
+}
+.prev{
+    left:0;
+}
+.prev.disabled,
+.next.disapled{
+   visibility: hidden;
+}
+.fa{
+   position:absolute;
+    width: 100%;
+    height:100%;
+    font-weight: bold;
+    font-size: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.prev .fa{
+    left: 0;
+}
+.next .fa{
+    right:0;
+}
+.prev:hover, .next:hover{
+    background-color:rgb(255, 122, 55) ;
+    color: #000;
+}
+.cards-container .card{
+    width:260px;
+    height: 420px;
+    background-color: #FFF;
+    padding:16px;
+    border-radius:5px;
+    user-select: none;
+    margin:0 65px;
+    transition: .7s;
+    min-width: 260px;
+}
+.recipe-photo{
+    background-image:url('../assets/img/card1.jpg');
+    width:100%;
+    height:150px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+}
+/********************************/
+.recipe-informatin .recipe-main-info .title{
+    text-align: center;
+    margin: 10px 10px;
+}
+.recipe-informatin .recipe-main-info .title hr{
+    margin:10px 0;
+    border:none;
+    background-color:rgb(255, 122, 55);
+    height: 2px;
+}
+.recipe-informatin .cost{
+    color:rgb(255, 108, 34);
+    font-weight: bold;
+    font-size: 20px;
+    margin-left:15px;
+}
+.recipe-informatin .time{
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin:10px 0 10px 15px;
+}
+.recipe-informatin p{
+    font-size: 12px;
+    margin:10px 15px;
+}
+.recipe-informatin p span{
+    display:block;
+    font-weight: bold;
+}
+.recipe-informatin a{
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 15px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+.slider1{
+    height:50px;
+    bottom: 0;
+    text-align: center;
+    user-select: none;
+    margin:20px auto;
+    width:100%;
+}
+.slider1 > div{
+    width: 18px;;
+    height: 18px;;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    margin:0 6px;
+    cursor: pointer;
+    display: inline-block;
+}
+.slider1 .one,
+.slider1 .six{
+    display: inline-block;
+}
+.cards-container .card.active{
+    opacity:1;
+}
+@media (max-width:1000px){
+    #recipe-card-section{
+        height: 800px;
+    }
+    .disciption {
+       max-width:400px;
+    }
+    .disciption h1{
+        font-size: 48px;
+    }
+    .up-prev{
+        margin-left: 0;
+    }
+    .up-next{
+        margin-right: 0;
+    }
+    .prev, .next{
+        visibility: visible;
+    }
+    .cards-container{
+        animation: none;
+    }
+}
