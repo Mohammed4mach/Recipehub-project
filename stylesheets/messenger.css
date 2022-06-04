@@ -1,0 +1,81 @@
+.background
+{
+    background-color: #fdfafa;
+}
+
+.background img
+{
+    object-fit: cover;
+}
+
+.masseges_section
+{
+    padding: 40px;
+    padding: 25px;
+}
+
+.profile_owner_img
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.messenger-title
+{
+    font-size: 38px;
+    display: inline;
+    margin: 10px;
+    color: #e75b1e;
+    position: absolute;
+    left: 35%;
+    top:6%;
+}
+
+.chat_section
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+}
+
+a.chat_section:hover
+{
+    background-color: rgb(231, 231, 231);
+    color: black;
+    transition: all 0.4s ease-in-out;
+}
+
+.chat_user_img
+{
+    height:100px ;
+    width:100px ;
+    border-radius: 50%;
+}
+
+.users_names
+{
+    display: inline;
+    margin-left: 20px;
+}
+
+.last_message
+{
+    margin-left: 20px;
+    position: absolute;
+    left: 147px;
+    margin-top: -33px;
+    color: rgba(61, 58, 58, 0.8);
+} 
+@media (min-width: 280px) and ( max-width: 500px) 
+{
+  .messenger-title
+  {
+    position: absolute;
+    left: 35%;
+    top:3%;
+  }
+}

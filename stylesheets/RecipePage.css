@@ -1,0 +1,233 @@
+body{
+    background: linear-gradient(rgb(25, 24, 24, 0.5),rgb(59, 51, 51)),url(../assets/img/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main
+{
+    max-width: 700px;
+    box-shadow: 0 0 10px rgba(28, 1, 1, 0.7);
+    margin: 50px auto;
+}
+
+.main, .comments-container{
+    padding: 40px;
+    background-color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main:not(.comments-container)
+{ border-radius: 5px 5px 0 0 }
+
+
+.prod-recipes
+{
+    position: absolute;
+    top: 140px;
+    right: 45px;
+    font-size: 16px;
+}
+.prod-recipes a
+{
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(0, 170, 0);
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+.prod-recipes a:hover {
+    color: white;
+    background-color: rgb(0, 110, 0);
+}
+
+.prod-recipes .add-recipe
+{
+    background-color: rgb(0, 170, 0);
+    border-radius: 10px 0 0 10px;
+    border-right:0.5px #148d12 solid;
+    position: relative;
+    left: 5px;
+}
+
+.prod-recipes .add-recipe:hover
+{ background-color: rgb(0, 110, 0) }
+
+.prod-recipes a:last-child
+{
+    border-radius: 0 10px 10px 0;
+}
+
+.img
+{
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 2px solid #444;
+    border-radius: 10px;
+}
+.img img
+{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.img-prod
+{
+    margin-top: 40px
+}
+
+.time{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.price
+{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.saperatore{
+    margin: 10px 0;
+    border: none;
+    background-color: rgb(255, 122, 55);
+    height: 2px;
+}
+
+.paragraph{
+    font-size: 15px;
+}
+.headlines
+{
+    color:#e75b1e;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+.video-link:hover{
+    color:#e75b1e;
+}
+
+.video-link
+{
+  display: block; 
+  color:black;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/*button*/
+.link-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.favorite-btu:hover, .favorite-btu.liked{
+    color:white;
+    background-color: #e75b1e;
+}
+.favorite-btu, .favorite-btu.liked:hover{
+    color:#e75b1e;
+    background-color: black;
+    padding: 5px;   
+    width: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0.25rem;
+    line-height: 1.5;
+    margin-left: 15px;
+    transition-property: color background-color;
+    transition-duration: 0.1s;
+}
+/* end button*/
+
+.comments-container
+{
+    padding-top: 15px;
+    border-radius: 0 0 5px 5px;
+    background-color: #fffe;
+}
+
+.comment-box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comment-box .user-info
+{
+    position: relative;
+    right: 20px;
+    top: 15px;
+    transform: scale(0.7);
+    margin-bottom: 0;
+    align-self: flex-start;
+}
+
+.comment-box-form
+{
+    border-bottom: 1px solid rgba(255, 122, 55, 0.4);
+    padding-bottom: 50px;
+}
+
+.comment-box-form textarea
+{
+    width: 75%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 7px;
+    border: 1px solid #4447;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.comment-box-form textarea:focus-visible
+{ outline: none }
+
+#MainContent_Comment
+{
+    text-align: center;
+    background-color: #e75b1e;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+#MainContent_Comment:hover
+{ background-color: #d64a1d; }
+
+.comment-box .comment-content
+{
+    width: 75%;
+    background-color: #7774;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #0009;
+}

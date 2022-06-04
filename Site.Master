@@ -1,0 +1,231 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Recipehub.Site" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void search_submit_Click(object sender, EventArgs e)
+    {
+        string url = $"~/Search.aspx?srch={search_input.Text}";
+        Response.Redirect(url);
+    }
+</script>
+
+
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title><%: Page.Title %> - Recipehub</title>
+
+
+    <link href="assets/img/fav-icon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/all.min.css">
+    <link rel="stylesheet" href="stylesheets/Master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+
+    <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-expand-em">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="Default.aspx">Recipehub</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+
+                  <span class="navbar-toggler-icon"></span>                
+
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   
+                      <li class="nav-item">
+                   
+                        <a class="nav-link  p-lg-3" aria-current="page" href="sign up.aspx">
+                            <i class="fa-solid fa-user-plus"></i>
+                            Sign Up
+                        </a>
+                    
+                      </li>
+                    
+                      <li class="nav-item">
+                    
+                        <a class="nav-link p-lg-3" href="sign in.aspx">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                            Sign In
+                        </a>
+                    
+                      </li>
+                    
+                      <li class="nav-item">
+
+                        <a class="nav-link p-lg-3" href="Profile Page.aspx">
+                            <i class="fa-regular fa-user"></i>
+                            Profile
+                        </a>
+
+                      </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link p-lg-3" href="Messenger.aspx">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-fill" viewBox="0 0 16 16">
+  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+</svg>
+                            Messenger
+                        </a>
+
+                      </li>
+                        
+                </ul>
+                    <asp:TextBox ID="search_input" runat="server" placeholder="Search" aria-label="Search"></asp:TextBox>
+                    <asp:Button ID="search_submit" runat="server" Text="Search" class="btn btn-outline-success" OnClick="search_submit_Click"/>
+                </div>
+            </div>
+        </nav>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+        <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-white text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center p-4 border-bottom">
+    
+      <!-- Right -->
+    <div class="text-center">
+      <a class=" facebook btn btn-outline-light btn-floating m-1 " href="#!">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1 twitter" href="#!">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1 " href="#!">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="#!">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Recipehub
+          </h6>
+          <p>
+            Recipehub is website that provides you with the best and latest recipes from all over the globe ,
+            sign up to join our community and share your favourat recipes to the world. 
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Sea food</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Fast food</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Egyptian food</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Salad</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Try some of our pages
+          </h6>
+          <p>
+            <a href="Sign in.aspx" class="text-reset">Sign in</a>
+          </p>
+          <p>
+            <a href="Sign up.aspx" class="text-reset">Sign up</a>
+          </p>
+          <p>
+            <a href="Default.aspx" class="text-reset"> Home </a>
+          </p>
+          <p>
+            <a href="Profile Page.aspx" class="text-reset">Profile</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contacts
+          </h6>
+          <p><i class="fas fa-home me-3"></i><br />Sidi Beshr ,Alexandria ,Egypt</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i><br />
+            contact@recipehub.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i><br /> + 20 155 779 2489</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgb(0, 0, 0);color:ghostwhite;">
+    © 2022 Copyright:
+    <a class="fw-bold" href="!#" style="color:#e75b1e; text-decoration:none">Recipehub</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    
+    </form>
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/all.min.js"></script>
+
+</body>
+</html>

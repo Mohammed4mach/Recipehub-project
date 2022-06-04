@@ -1,0 +1,135 @@
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+	position: relative
+}
+
+/*navbar start*/
+
+.navbar{
+    background-color: black;
+    height: 75px;
+}
+
+.navbar-brand{
+    font-family: 'Tapestry', cursive;
+    font-size: 30px;
+    color: #e75b1e;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.navbar-brand:hover{
+    color: #e75b1e;
+}
+
+.navbar .navbar-nav .nav-link{
+    color: white;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.2s  ease-in-out;
+}
+
+/*links*/
+
+.navbar .navbar-nav .nav-link:hover
+{
+    color:#e75b1e;
+    border-bottom:  2px solid #e75b1e;
+    transition: all 0.2s  ease-in-out;
+}
+
+.navbar .nav-link.disabled
+{
+	color: #6c757d;
+}
+
+/* button*/
+
+nav .btn-outline-success {
+    color: #e75b1e;
+    border-color: #e75b1e;
+    margin-left: 15px;
+}
+
+
+.btn-outline-success:hover{
+    color: white;
+    background-color: #e75b1e;
+    border: 1px solid #e75b1e;
+}
+
+.dropdown-menu {
+    color:  var(--bs-orange);
+    background: #333;
+}
+
+.dropdown-item{
+    color: white;
+}
+
+input#search_input
+{
+    padding: 3px;
+}
+/*navbar ended*/
+
+/*start footer*/
+
+  .owner{
+      color: #e75b1e;
+  }
+
+/*end footer*/
+
+/* Start text area scroll-bar*/
+textarea
+{
+    scrollbar-color: darkorange rgb(255,255,255,0.1);
+    scrollbar-width: thin;
+}
+
+/* width */
+textarea::-webkit-scrollbar 
+{
+    width: 8px;
+}
+textarea::-moz-scrollbar 
+{
+    width: 8px;
+}
+
+/* Track */
+textarea::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 1px 20px transparent;/* Hide Track */
+    border-radius: 4px;
+}
+textarea::-moz-scrollbar-track 
+{
+    box-shadow: inset 0 1px 20px transparent;/* Hide Track */
+    border-radius: 4px;
+}
+
+/* Track apear on hover*/
+textarea::-webkit-scrollbar-track:hover
+{
+    background-color: rgb(255,255,255,0.1);
+}
+textarea::-moz-scrollbar-track:hover
+{
+    background-color: rgb(255,255,255,0.1);
+}
+
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+    background: darkorange;
+    border-radius: 4px;
+}
+textarea::-moz-scrollbar-thumb {
+    background: darkorange;
+    border-radius: 4px;
+}
+/* End scroll-bar*/
+

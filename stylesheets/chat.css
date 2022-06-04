@@ -1,0 +1,86 @@
+.background
+{
+    background-color: #e2dede;
+}
+
+.messeges_section
+{
+    padding: 30px;
+    min-height: 75vh;
+}
+
+.massege_container.container
+{
+    background-color: rgb(243, 242, 242);
+    border-radius: 10px 0px 10px 10px;
+    min-width: 200px;
+    width: fit-content;
+    max-width: 600px;
+    word-break: break-word;
+    padding: 7px;
+    padding-top: 10px;
+    min-height: 70px;
+    margin-right:20px;
+    margin-top: 40px;
+}
+
+.background div hr
+{
+    color: rgb(201, 193, 193);
+}
+
+.sender_name
+{
+    margin-bottom: -10px;
+}
+
+.sender_name a
+{
+    color: #e75b1e;
+    text-decoration: none;
+}
+
+.massege_container.container.second_sender
+{
+     margin-left: 20px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.typing_field
+{
+    padding: 25px;
+    background-color:#181615 ;
+    width: 100%;
+}
+
+.message_box
+{
+    width: 85%;
+    background-color: rgba(238, 229, 229, 0.979);
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    padding-left: 30px;
+    outline: none;
+    margin-bottom: -20px;
+    padding-top:12px;
+}
+
+.send_button
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(238, 229, 229, 0.979);
+    transition: all 0.2s ease-in-out;
+}
+
+.send_button:hover
+{
+    background-color:rgba(228, 217, 217, 0.979) ;
+    transition: all 0.2s ease-in-out;
+}

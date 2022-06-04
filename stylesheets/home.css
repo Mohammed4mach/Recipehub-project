@@ -1,0 +1,80 @@
+.slider-container *::selection,
+.slider-header:first-of-type *::selection
+{
+    background: transparent;
+    color: inherit;
+}
+
+.slider-header h2 {
+    color: #e75b1e;
+}
+
+.home-container {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-section, .list-slider
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section { margin: 30px 0 }
+
+.user-info
+{
+    flex-direction: column;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.user-info span
+{
+    margin-top: 5px;
+}
+
+#recipe-card-section
+{
+    width: 100%;
+    padding: 50px;
+}
+
+.slider-header
+{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px;
+}
+
+.slide-left, .slide-right
+{
+    max-height: 30px;
+    color: #555;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: font-size 0.1s ease-in-out;
+}
+.slide-left:hover, .slide-right:hover
+{
+    color: #333;
+    font-size: 27px;
+}
+
+.list-slider
+{
+    min-height: 145px;
+}
+
+.slider-container
+{
+    width: 85%;
+    background-color: #9991;
+    padding: 10px;
+}
